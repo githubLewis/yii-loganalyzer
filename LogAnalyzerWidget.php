@@ -15,9 +15,11 @@ class LogAnalyzerWidget extends CWidget {
 
     public $title;
 
+    public $showTitle = true;
+
     private $last_status;
 
-    protected $_path = 'ext.loganalyzer.';
+    protected $_path = 'ext.yii-loganalyzer.';
 
     public function init()
     {
@@ -46,11 +48,13 @@ class LogAnalyzerWidget extends CWidget {
             Yii::app()->controller->redirect($this->getUrl(false));
         }
         
+        $log = '';
         /**
          * Load log file
          */
-        $log = file_get_contents($this->log_file_path);
-
+        if (file_exists($this->log_file_path)){
+            $log = file_get_contents($this->log_file_path);
+        }
         /**
          * Explode log on messages
          */

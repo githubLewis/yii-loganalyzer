@@ -59,10 +59,12 @@ Yii::app()->clientScript->registerScript('tabs', "
 ?>
 
 <div class="loganalyzer">
+
+<?php if($this->showTitle){ ?>
     <div class="page-header">
         <h1><?php echo $this->title; ?></h1>
     </div>
-
+<?php } ?>
     <div class="row-fluid log-actions-bar">
         <a href="<?php echo $this->getUrl(); ?>" id="clear"><span class="label"><?php echo Yii::t('LogAnalyzer.main', 'Clear Log') ?></span></a>
 
