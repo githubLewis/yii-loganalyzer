@@ -8,13 +8,18 @@
 - Cleaning the log file
 - Multilingual (russian, english and Portuguese)
 
+## Installation
+1. Navigate to your Yii extensions folder (/application/extensions)
+2. Create a folder called "yii-loganalyzer"
+3. Download & unzip all files from this repo.
+
 ## Example:
 
 Print out the widget in the view:
 
 ```php
 <?php
-$this->widget('ext.loganalyzer.LogAnalyzerWidget', array(
+$this->widget('ext.yii-loganalyzer.LogAnalyzerWidget', array(
         'filters' => array('Text filtering','One more'),
         'title'   => 'Title of the widget' ,
         // 'log_file_path' => 'Absolute path of the Log File',
@@ -50,15 +55,9 @@ Also in the expansion is extended to marshurt logs, which adds to the message lo
 
 Big thanks [Tonin De Rosso Bolzan](https://github.com/tonybolzan):
 
-Translating to English
-
-JavaScript Optimized:
-
-- added effects
-- confirmation on clean
-- Expand/Collapse Stack Trace
 
 PHP Code Optimized:
 
-- removed method "processLogs()" from LALogRoute because it is equal to parent class CFileLogRoute
-- changed default "log_file_path" on LogAnalyzerWidget to Yii::app()->getRuntimePath()
+- some defensive code added
+- names standardised (uses yii-loganalyzer)
+- new property added "show title" this enables the developer to hide or show the widget title.
