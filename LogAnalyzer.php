@@ -2,10 +2,11 @@
 /**
  * LogAnalyzer Component class
  *
- * @author Stanislav Sysoev <d4rkr00t@gmial.com>
- * @see https://github.com/d4rkr00t/yii-loganalyzer
+ * @author Lewis Cornick
+ * Forked from tonybolzan <tonin@bolzan.io>
+ * @see https://github.com/tonybolzan/yii-loganalyzer
  * @license http://www.opensource.org/licenses/bsd-license.php
- * @version 0.2
+ * @version 0.3
  */
 class LogAnalyzer extends CComponent
 {
